@@ -8,6 +8,9 @@ import ChartPanel from './components/ChartPanel'
 import StockDashboard from './components/StockDashboard'
 
 import { BrowserRouter as Router } from "react-router-dom";
+import { Buffer } from "buffer";
+
+window.Buffer = Buffer;
 
 
 

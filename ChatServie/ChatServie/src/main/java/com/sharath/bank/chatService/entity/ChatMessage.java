@@ -1,0 +1,42 @@
+package com.sharath.bank.chatService.entity;
+
+
+import com.sharath.bank.chatService.model.Status;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+
+@Data
+@NoArgsConstructor
+@Entity
+public class ChatMessage {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String senderName;
+    private String receiverName;
+    private String message;
+    private String media;
+    private String mediaType;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
+    @Column(nullable = false)
+    private LocalDateTime  timestamp=LocalDateTime.now();
+
+    // Constructors
+    public ChatMessage(String senderName, String receiverName, String message, String media, String mediaType, Status status) {
+        this.senderName = senderName;
+        this.receiverName = receiverName;
+        this.message = message;
+        this.media = media;
+        this.mediaType = mediaType;
+        this.status = status;
+
+    }
+}

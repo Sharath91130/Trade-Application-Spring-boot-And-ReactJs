@@ -1,0 +1,60 @@
+.chart-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   width: 200%;         /* Chart width */
+    max-width: 1200px;  /* Maximum chart width */
+    height: 600px;      /* Chart height */
+    margin: auto;
+    right: 1000px;
+}
+
+.chart-container {
+    width: 200%;         /* Chart width */
+    max-width: 1200px;  /* Maximum chart width */
+    height: 600px;      /* Chart height */
+    margin: auto;
+    right: 1000px;
+}
+
+.realtime-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #f0f3fa;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.realtime-button:hover {
+    background-color: #e0e3eb;
+}
+
+.realtime-button:active {
+    background-color: #d1d4dc;
+}
+
+.trade-dashboard {
+  background-color: #0f172a;
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  margin: 20px;
+}
+
+.trade-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 600px;
+}
