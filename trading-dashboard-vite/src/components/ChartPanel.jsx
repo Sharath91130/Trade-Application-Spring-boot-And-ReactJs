@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { createChart } from "lightweight-charts";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import UpstoxFeed from "./UpstockFeed";
+import RecommendationForm from "./RecommendationForm";
 
 export default function ChartPanel() {
   const chartRef = useRef();
@@ -10,9 +12,9 @@ export default function ChartPanel() {
   const [loading, setLoading] = useState(false);
   const [livePrice, setLivePrice] = useState(null);
   const [candleInfo, setCandleInfo] = useState(null)
+  const [showRecommendation, setShowRecommendation] = useState(false);
 
-
-
+ 
   const UPSTOX_TOKEN = import.meta.env.VITE_UPSTOX_TOKEN;
 
   const { state } = useLocation();
@@ -20,7 +22,9 @@ export default function ChartPanel() {
 const previousOpen= state?.prev
   const instrumentKey = state?.instrumentKey;
   const symbol = state?.symbol;
-   
+   const handleRecommend = () => {
+    navigate("/recommend", { state: { name: symbol } });
+  };
     const fetchCandleInfo = async () => {
     try {
       const url = `https://api.upstox.com/v3/historical-candle/intraday/${instrumentKey}/days/1`;
@@ -87,7 +91,7 @@ const previousOpen= state?.prev
     // Fetch immediately + every 5 seconds
     fetchLivePrice();
     fetchCandleInfo();
-    const interval = setInterval(fetchLivePrice, 1000);
+    const interval = setInterval(fetchLivePrice, 10000);
 
     return () => clearInterval(interval);
   }, [instrumentKey, UPSTOX_TOKEN]);
@@ -241,6 +245,16 @@ const previousOpen= state?.prev
           >
             {livePrice ? `₹${livePrice}` : "Loading..."}
           </span>
+
+          <div>
+     <button
+        className="btn btn-success"
+        onClick={() => handleRecommend()}
+      >
+      Create Recomdation
+    </button>
+   
+    </div>
          {candleInfo ? (
   <div
     className="mt-3 d-flex justify-content-around text-center flex-wrap gap-4 p-3 bg-light rounded shadow-sm"
@@ -267,6 +281,7 @@ const previousOpen= state?.prev
       <span className="text-secondary small d-block">Close</span>
       <h6 className="text-warning fw-bold mb-0">{candleInfo.close}</h6>
     </div>
+    
   </div>
 ) : (
   <p className="text-muted mt-2 small text-center">Loading market data...</p>
@@ -368,6 +383,8 @@ const previousOpen= state?.prev
           </div>
         </div>
       )}
+     <UpstoxFeed/>
+      
     </div>
   );
 }

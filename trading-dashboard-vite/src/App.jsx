@@ -3,17 +3,15 @@ import Sidebar from './components/Sidebar'
 import ChartPanel from './components/ChartPanel'
 import StockDashboard from './components/StockDashboard'
 import { Route, Router, Routes } from 'react-router-dom'
-import UpstoxWebSocket from './components/Websocket'
-import MarketDataFeed from './components/MarketFeed'
-import UpstoxFeed from './components/UpstockFeed'
-import MarketFeed from './components/MarketFeed'
+import RecommendationForm from './components/RecommendationForm'
 
 function App() {
   return (
   
       <Routes>
-        <Route path="/" element={<UpstoxFeed />} />
+        <Route path="/" element={<StockDashboard />} />
       <Route path='/chart' element={<ChartPanel/>}/>
+      <Route path='/recommend' element={<RecommendationForm/>}/>
       </Routes>
 
   )

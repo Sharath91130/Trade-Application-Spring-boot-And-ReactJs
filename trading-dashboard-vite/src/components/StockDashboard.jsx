@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { createChart } from "lightweight-charts";
 import { useNavigate } from "react-router-dom";
+import UpstoxFeed from "./UpstockFeed";
 
 export default function StockDashboard() {
   const [stocks, setStocks] = useState([]);
@@ -189,6 +190,7 @@ export default function StockDashboard() {
             </div>
           );
         })}
+       
       </div>
     </div>
   );
