@@ -3,22 +3,23 @@ package com.sharath.Entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.Instant;
-
-@Entity
+import java.time.LocalDateTime;
 @Data
+@Entity
 @Table(name = "notifications")
 public class Notification {
-  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
 
-  @ManyToOne @JoinColumn(name = "investor_id")
-  private Long investor;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  @ManyToOne @JoinColumn(name = "recommendation_id")
-  private Recommendation recommendation;
+    private Long traderId;
+    private Long investorId;
+    private String message;
+    private boolean read = false;
 
-  private boolean isRead = false;
-  private Instant createdAt = Instant.now();
-  // getters / setters
+    private LocalDateTime createdAt = LocalDateTime.now();
+
+
+    // Getters, setters
 }

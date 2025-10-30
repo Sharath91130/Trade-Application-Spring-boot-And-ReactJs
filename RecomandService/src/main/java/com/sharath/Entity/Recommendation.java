@@ -1,8 +1,10 @@
 package com.sharath.Entity;
 
 import jakarta.persistence.*;
-import java.time.Instant;
+import lombok.Data;
 
+import java.time.Instant;
+@Data
 @Entity
 @Table(name = "recommendations")
 public class Recommendation {
@@ -11,18 +13,22 @@ public class Recommendation {
 
 
 
-  @ManyToOne
-  @JoinColumn(name = "stock_id")
-  private Stock stock;
+  private Long traderId;
+
+
+//  @ManyToOne
+//  @JoinColumn(name = "stock_id")
+//  private Stock stock;
 
   @Enumerated(EnumType.STRING)
   private Action action; // BUY, SELL, HOLD
-
+    private String  StockSymbol;
   private Double targetPrice;
   private Double stopLoss;
   private String message;
   private Instant createdAt = Instant.now();
 
-  public static enum Action { BUY, SELL, HOLD }
-  // getters / setters
+
+
+    // getters / setters
 }

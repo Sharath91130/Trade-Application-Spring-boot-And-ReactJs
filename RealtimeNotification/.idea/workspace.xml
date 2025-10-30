@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3c162823-44c4-4f75-8f35-7e9c0748f128" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../RecomandService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RecomandService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/InvestorPortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/InvestorPortfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/Recommendation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/Recommendation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/Stock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RecomandService/src/main/java/com/sharath/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecomandService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../RecomandService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trading-dashboard-vite/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../trading-dashboard-vite/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trading-dashboard-vite/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../trading-dashboard-vite/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trading-dashboard-vite/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../trading-dashboard-vite/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trading-dashboard-vite/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../trading-dashboard-vite/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trading-dashboard-vite/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../trading-dashboard-vite/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trading-dashboard-vite/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../trading-dashboard-vite/vite.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="34m9BLgwcTA4Z1aW6EfJFN25KwL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c162823-44c4-4f75-8f35-7e9c0748f128" name="Changes" comment="" />
+      <created>1761807747225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761807747225</updated>
+    </task>
+    <servers />
+  </component>
+</project>
