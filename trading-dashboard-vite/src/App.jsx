@@ -4,17 +4,31 @@ import ChartPanel from './components/ChartPanel'
 import StockDashboard from './components/StockDashboard'
 import { Route, Router, Routes } from 'react-router-dom'
 import RecommendationForm from './components/RecommendationForm'
+import InvestorPortfolio from './components/InvestorComponents/InvestorPortfolio'
+
+import NotificationSender from './components/Notification/NotificationSender'
+import NotificationReceiver from './components/Notification/NotificationReceiver'
+import ChatDemo from './components/Notification/ChatDemo'
+import Connect from './components/Notification/ChatDemo'
+import SseDemo from './components/Notification/SeeEvents'
 
 function App() {
-  return (
+//   return (
   
-      <Routes>
-        <Route path="/" element={<StockDashboard />} />
-      <Route path='/chart' element={<ChartPanel/>}/>
-      <Route path='/recommend' element={<RecommendationForm/>}/>
-      </Routes>
+//       <Routes>
+//         <Route path="/" element={<NotificationClient />} />
+//       <Route path='/chart' element={<ChartPanel/>}/>
+//       <Route path='/recommend' element={<RecommendationForm/>}/>
+//       </Routes>
 
-  )
-}
-
+//   )
+// }
+ return (
+    <div className="p-8">
+      <h1 className="text-2xl font-bold mb-6">Real-Time Notifications</h1>
+      <InvestorPortfolio />
+      {/* //<NotificationReceiver /> */}
+    </div>
+  );
+};
 export default App
