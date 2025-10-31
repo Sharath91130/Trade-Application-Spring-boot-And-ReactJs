@@ -20,7 +20,7 @@ export default function ChartPanel() {
   const { state } = useLocation();
   const navigate = useNavigate();
 const previousOpen= state?.prev
-  const instrumentKey = state?.instrumentKey;
+  const instrumentKey ="NSE_EQ|INE467B01029";
   const symbol = state?.symbol;
    const handleRecommend = () => {
     navigate("/recommend", { state: { name: symbol } });

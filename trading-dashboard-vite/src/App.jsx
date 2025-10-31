@@ -11,6 +11,7 @@ import NotificationReceiver from './components/Notification/NotificationReceiver
 import ChatDemo from './components/Notification/ChatDemo'
 import Connect from './components/Notification/ChatDemo'
 import SseDemo from './components/Notification/SeeEvents'
+import TraderHistoryCard from './components/Trader/TraderHistoryCard'
 
 function App() {
 //   return (
@@ -26,7 +27,7 @@ function App() {
  return (
     <div className="p-8">
       <h1 className="text-2xl font-bold mb-6">Real-Time Notifications</h1>
-      <InvestorPortfolio />
+      <TraderHistoryCard/>
       {/* //<NotificationReceiver /> */}
     </div>
   );
