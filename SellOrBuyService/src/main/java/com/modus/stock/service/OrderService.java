@@ -21,9 +21,10 @@ public class OrderService {
 
     public OrderResponse placeOrder(OrderRequest request) {
 
+
         LocalTime now = LocalTime.now();
         LocalTime start = LocalTime.of(9, 30); // 9:30 AM
-        LocalTime end = LocalTime.of(15, 0);   // 3:00 PM
+        LocalTime end = LocalTime.of(15, 30);   // 3:00 PM
 
         boolean isMarketOpen = !now.isBefore(start) && !now.isAfter(end);
         // Simulate slicing
@@ -44,10 +45,11 @@ public class OrderService {
         orderEntity.setQuantity(request.getQuantity());
         orderEntity.setTag(request.getTag());
         orderEntity.setAmo(!isMarketOpen);
-        if(!isMarketOpen){
-            orderEntity.setStatus("PENDING");
-        }else{
+        if(isMarketOpen && request.getOrderType().equals("MARKET") && request.getPrice()==0.0){
             orderEntity.setStatus("SUCCESS");
+        }else{
+
+            orderEntity.setStatus("PENDING");
         }
 
         orderRepository.save(orderEntity);
@@ -69,18 +71,16 @@ public class OrderService {
 
     @Scheduled(cron = "0 30 09 * * *")
     public void updatePendingOrders() {
-        List<OrderEntity> pendingOrders = orderRepository.findByStatus("PENDING");
+        List<OrderEntity> pendingOrders = orderRepository.findByStatusAndIsAmoAndPriceAndOrderType("PENDING",true,0.0,"MARKET");
 
-        if (pendingOrders.isEmpty()) {
-            System.out.println("✅ No pending orders found.");
-            return;
-        }
+        MarketPriceService marketPriceService=new MarketPriceService();
+        double currentPrice = marketPriceService.getCurrentPrice();
 
-        for (OrderEntity order : pendingOrders) {
+        for(OrderEntity order:pendingOrders){
+            order.setPrice(currentPrice);
             order.setStatus("SUCCESS");
+            orderRepository.save(order);
         }
-
-        orderRepository.saveAll(pendingOrders);
-        System.out.println("✅ Updated " + pendingOrders.size() + " pending orders to SUCCESS.");
     }
+
 }
