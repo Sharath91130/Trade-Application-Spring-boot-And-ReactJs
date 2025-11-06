@@ -67,10 +67,8 @@ public class OrderService {
         return response;
     }
 
-    @Scheduled(cron = "0 09 17 * * *")
+    @Scheduled(cron = "0 30 09 * * *")
     public void updatePendingOrders() {
-        System.out.println("⏰ Scheduler started at 4:08 PM — checking pending orders...");
-
         List<OrderEntity> pendingOrders = orderRepository.findByStatus("PENDING");
 
         if (pendingOrders.isEmpty()) {
