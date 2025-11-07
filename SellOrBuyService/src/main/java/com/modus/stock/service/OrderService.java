@@ -18,6 +18,9 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
+    private  MarketPriceService marketPriceService;
+
     public OrderResponse placeOrder(OrderRequest request) {
 
 
@@ -81,5 +84,16 @@ public class OrderService {
             orderRepository.save(order);
         }
     }
+
+    @Scheduled(fixedRate = 60000) // 60000 ms = 1 minute
+    public void updateLimitedOrders() {
+        double currentPrice = marketPriceService.getCurrentPrice();
+        List<OrderEntity> orders = orderRepository.findByStatusAndPriceAndOrderType("PENDING", currentPrice, "LIMIT");
+        for (OrderEntity order : orders) {
+            order.setStatus("SUCCESS");
+            orderRepository.save(order);
+        }
+    }
+
 
 }
