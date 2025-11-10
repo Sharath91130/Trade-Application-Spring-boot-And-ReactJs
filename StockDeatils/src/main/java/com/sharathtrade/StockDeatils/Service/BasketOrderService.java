@@ -19,6 +19,8 @@ public class BasketOrderService {
     public void placeBasket() throws Exception {
         System.out.println("checlll");
 
+        System.out.println("2nd commit");
+
         String authHeader = "token " + API_KEY + ":" + ACCESS_TOKEN;
 
         List<Map<String, String>> orders = List.of(
