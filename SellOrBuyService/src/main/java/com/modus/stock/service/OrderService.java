@@ -102,6 +102,9 @@ public class OrderService {
     }
 
     public OrderResponse sellOrder(OrderRequest request) {
+
+        System.out.println("sellOrder entered");
+
         long startTime = System.currentTimeMillis();
 
         LocalTime now = LocalTime.now();
