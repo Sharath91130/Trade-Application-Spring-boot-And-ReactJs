@@ -17,6 +17,7 @@ public class BasketOrderService {
     private static final String ACCESS_TOKEN = "YOUR_ACCESS_TOKEN"; // Store securely later
 
     public void placeBasket() throws Exception {
+        System.out.println("checlll");
 
         String authHeader = "token " + API_KEY + ":" + ACCESS_TOKEN;
 
