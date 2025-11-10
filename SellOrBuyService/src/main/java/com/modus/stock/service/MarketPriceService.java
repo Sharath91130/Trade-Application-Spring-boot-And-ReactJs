@@ -16,7 +16,7 @@ public class MarketPriceService {
     private final RestTemplate restTemplate = new RestTemplate();
 
 //    @Value("${upstox.api.access-token}")
-    private String accessToken="eyJ0eXAiOiJKV1QiLCJrZXlfaWQiOiJza192MS4wIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiI0SENYTlgiLCJqdGkiOiI2OTBjMmNiYzg3NTViZjFhZTQyZDgwYTYiLCJpc011bHRpQ2xpZW50IjpmYWxzZSwiaXNQbHVzUGxhbiI6ZmFsc2UsImlhdCI6MTc2MjQwNTU2NCwiaXNzIjoidWRhcGktZ2F0ZXdheS1zZXJ2aWNlIiwiZXhwIjoxNzYyNDY2NDAwfQ.njFPiz6aZGdxZ1kompcK7WRj6_VIbLOJuOrqvyFJtA0";
+    private String accessToken="eyJ0eXAiOiJKV1QiLCJrZXlfaWQiOiJza192MS4wIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiI0SENYTlgiLCJqdGkiOiI2OTExNzI5NzAwMGE4YzY0YWM5OTA4ZTEiLCJpc011bHRpQ2xpZW50IjpmYWxzZSwiaXNQbHVzUGxhbiI6ZmFsc2UsImlhdCI6MTc2Mjc1MTEyNywiaXNzIjoidWRhcGktZ2F0ZXdheS1zZXJ2aWNlIiwiZXhwIjoxNzYyODEyMDAwfQ.JmHXG-RyH1LBg_vp3YjaZlSQXzqSJ3MIFIZiZ3awEAY";
 
 
     @Value("${app.name}")

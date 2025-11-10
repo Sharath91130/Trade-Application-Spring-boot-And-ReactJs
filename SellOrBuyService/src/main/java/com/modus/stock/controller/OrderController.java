@@ -20,5 +20,10 @@ public class OrderController {
 
         return orderService.placeOrder(request);
     }
+
+    @PostMapping("/sell")
+    public OrderResponse sellOrder(@RequestBody OrderRequest request) {
+        return orderService.sellOrder(request);
+    }
 }
 

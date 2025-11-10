@@ -9,6 +9,9 @@ public class OrderRequest {
     @JsonProperty("quantity")
     private int quantity;
 
+    @JsonProperty("user_id")
+    private Long user_id;
+
     @JsonProperty("product")
     private String product;
 

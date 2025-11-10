@@ -12,6 +12,7 @@ public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long user_id;
     private int quantity;
     private String product;
     private String validity;
